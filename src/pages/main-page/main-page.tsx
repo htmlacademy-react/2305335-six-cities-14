@@ -1,11 +1,11 @@
 import Header from '../../components/header/header';
 import PlaceCard from '../../components/place-card/place-card';
 
-type MainPagePropsType = {
+type OfferProps = {
   placesCount: number;
 }
 
-function MainPage({placesCount}: MainPagePropsType): JSX.Element {
+function MainPage({placesCount}: OfferProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <Header />
