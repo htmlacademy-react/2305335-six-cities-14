@@ -1,12 +1,12 @@
 import MainPage from '../../pages/main-page/main-page';
 
-type AppPropsType = {
+type AppProps = {
   placesCount: number;
 }
 
-function App({placesCount}: AppPropsType): JSX.Element {
+function App(props: AppProps): JSX.Element {
   return (
-    <MainPage placesCount={placesCount}/>
+    <MainPage {...props}/>
   );
 }
 
