@@ -1,5 +1,6 @@
 import Header from '../../components/header/header';
 import PlaceCard from '../../components/place-card/place-card';
+import {Helmet} from 'react-helmet-async';
 
 type OfferProps = {
   placesCount: number;
@@ -8,6 +9,9 @@ type OfferProps = {
 function MainPage({placesCount}: OfferProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
+      <Helmet>
+        <title>six-cities - Main</title>
+      </Helmet>
       <Header />
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
