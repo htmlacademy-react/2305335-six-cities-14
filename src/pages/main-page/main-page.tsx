@@ -2,11 +2,13 @@ import Header from '../../components/header/header';
 import PlaceCard from '../../components/place-card/place-card';
 import {Helmet} from 'react-helmet-async';
 
-type OfferProps = {
-  placesCount: number;
+import { OfferType } from '../../types/offer';
+
+type MainPageProps = {
+  offers: OfferType[];
 }
 
-function MainPage({placesCount}: OfferProps): JSX.Element {
+function MainPage({offers}: MainPageProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <Helmet>
@@ -55,7 +57,7 @@ function MainPage({placesCount}: OfferProps): JSX.Element {
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">312 places to stay in Amsterdam</b>
+              <b className="places__found">{ offers.length } places to stay in Amsterdam</b>
               <form className="places__sorting" action="#" method="get">
                 <span className="places__sorting-caption">Sort by</span>
                 <span className="places__sorting-type" tabIndex={0}>

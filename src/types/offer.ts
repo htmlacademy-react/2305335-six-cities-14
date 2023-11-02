@@ -1,22 +1,8 @@
-type OfferLocation = {
-  latitude: number;
-  longitude: number;
-  zoom: number;
-};
+import { OfferLocation } from '../types/offer-location';
+import { OfferCity } from '../types/offer-city';
+import { Host } from '../types/offer-host';
 
-type OfferCity = {
-  location: OfferLocation;
-  name: string;
-};
-
-export type Host = {
-  avatarUrl: string;
-  id: number;
-  isPro: boolean;
-  name: string;
-};
-
-export type Offer = {
+export type OfferType = {
   bedrooms: number;
   city: OfferCity;
   description: string;

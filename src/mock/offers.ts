@@ -1,7 +1,7 @@
-import { Offer } from '../types/offer';
+import { OfferType } from '../types/offer';
 import { CityName } from '../common/const';
 
-const offers: Offer[] = [
+const offers: OfferType[] = [
   {
     city: {
       name: CityName.Dusseldorf,
@@ -223,4 +223,4 @@ const offers: Offer[] = [
   }
 ];
 
-export default offers;
+export {offers};
