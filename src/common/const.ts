@@ -4,7 +4,17 @@ enum AppRoute {
   Main = '/',
   Login = '/login',
   Favorites = '/favorites',
-  Offer = '/offer'
+  Offer = '/offer',
+  NotFound = '/not-found'
+}
+
+enum CityName {
+  Paris = 'Paris',
+  Cologne = 'Cologne',
+  Brussels = 'Brussels',
+  Amsterdam = 'Amsterdam',
+  Hamburg = 'Hamburg',
+  Dusseldorf = 'Dusseldorf',
 }
 
 enum AuthorizationStatus {
@@ -13,4 +23,15 @@ enum AuthorizationStatus {
   Unknown = 'UNKNOWN'
 }
 
-export{PLACES_COUNT, AppRoute, AuthorizationStatus};
+const MIN_COMMENT_LENGTH = 50;
+const MAX_COMMENT_LENGTH = 300;
+
+const ratingMap = {
+  '5':'perfect',
+  '4':'good',
+  '3':'not bad',
+  '2':'badly',
+  '1':'terribly',
+};
+
+export{PLACES_COUNT, AppRoute, AuthorizationStatus, CityName, MIN_COMMENT_LENGTH, MAX_COMMENT_LENGTH, ratingMap};
