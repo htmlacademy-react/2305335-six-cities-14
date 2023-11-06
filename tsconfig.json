@@ -5,6 +5,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "plugins": [{"typescript-plagin-css-modules": "5.0.1"}],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

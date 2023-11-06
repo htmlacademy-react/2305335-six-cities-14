@@ -32,7 +32,7 @@ const offers: OfferType[] = [
     isFavorite: false,
     isPremium: false,
     rating: 4.8,
-    type: 'room',
+    type: 'Room',
     bedrooms: 1,
     maxAdults: 2,
     price: 142,
@@ -41,7 +41,6 @@ const offers: OfferType[] = [
       'Breakfast'
     ],
     host: {
-      id: 25,
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg'
@@ -84,13 +83,12 @@ const offers: OfferType[] = [
     isFavorite: false,
     isPremium: false,
     rating: 2.8,
-    type: 'room',
+    type: 'Room',
     bedrooms: 1,
     maxAdults: 2,
     price: 144,
     goods: ['Laptop friendly workspace', 'Breakfast', 'Washer'],
     host: {
-      id: 25,
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg',
@@ -133,7 +131,7 @@ const offers: OfferType[] = [
     isFavorite: true,
     isPremium: false,
     rating: 2.9,
-    type: 'room',
+    type: 'Room',
     bedrooms: 1,
     maxAdults: 2,
     price: 257,
@@ -150,7 +148,6 @@ const offers: OfferType[] = [
       'Dishwasher',
     ],
     host: {
-      id: 25,
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg',
@@ -194,7 +191,7 @@ const offers: OfferType[] = [
     isFavorite: false,
     isPremium: false,
     rating: 4.4,
-    type: 'house',
+    type: 'House',
     bedrooms: 3,
     maxAdults: 10,
     price: 360,
@@ -208,10 +205,9 @@ const offers: OfferType[] = [
       'Washer'
     ],
     host: {
-      'id': 25,
-      'name': 'Angelina',
-      'isPro': true,
-      'avatarUrl': 'img/avatar-angelina.jpg'
+      name: 'Angelina',
+      isPro: true,
+      avatarUrl: 'img/avatar-angelina.jpg'
     },
     description: 'Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.',
     location: {
