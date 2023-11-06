@@ -43,7 +43,8 @@ const offers: OfferType[] = [
     host: {
       name: 'Angelina',
       isPro: true,
-      avatarUrl: 'img/avatar-angelina.jpg'
+      avatarUrl: 'img/avatar-angelina.jpg',
+      id: 25
     },
     description: 'A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.',
     location: {
@@ -51,7 +52,7 @@ const offers: OfferType[] = [
       longitude: 6.779314,
       zoom: 16
     },
-    id: 1
+    id: '1',
   },
   {
     city: {
@@ -92,6 +93,7 @@ const offers: OfferType[] = [
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg',
+      id: 5,
     },
     description: 'This is a place for dreamers to reset, s the sun sets.',
     location: {
@@ -99,7 +101,7 @@ const offers: OfferType[] = [
       longitude: 4.902976,
       zoom: 16,
     },
-    id: 2,
+    id: '2',
   },
   {
     city: {
@@ -151,6 +153,7 @@ const offers: OfferType[] = [
       name: 'Angelina',
       isPro: true,
       avatarUrl: 'img/avatar-angelina.jpg',
+      id: 3,
     },
     description:
       'I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!',
@@ -159,7 +162,7 @@ const offers: OfferType[] = [
       longitude: 4.3376969999999995,
       zoom: 16,
     },
-    id: 3,
+    id: '3',
   },
   {
     city: {
@@ -207,7 +210,8 @@ const offers: OfferType[] = [
     host: {
       name: 'Angelina',
       isPro: true,
-      avatarUrl: 'img/avatar-angelina.jpg'
+      avatarUrl: 'img/avatar-angelina.jpg',
+      id: 9,
     },
     description: 'Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.',
     location: {
@@ -215,7 +219,7 @@ const offers: OfferType[] = [
       longitude: 9.975654,
       zoom: 16
     },
-    id: 4
+    id: '4'
   }
 ];
 
