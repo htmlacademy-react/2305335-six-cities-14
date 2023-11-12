@@ -1,21 +1,28 @@
 import Card from '../card/card';
 import { OfferPreviewType } from '../../types/offer-preview';
-import {CityName} from '../../common/const';
+import {CitiesLocation} from '../../common/const';
+import { useState } from 'react';
+import Map from '../map/map';
 
 type CitiesProps = {
   offers: OfferPreviewType[];
 }
 
 function Cities({offers}: CitiesProps): JSX.Element {
+  const [hoverOfferId, setHoverOfferId] = useState<
+    OfferPreviewType['id'] | null
+  >(null);
+  const activeCity = CitiesLocation.Amsterdam;
 
-  const activeCity = CityName.Amsterdam;
-
+  function handleCardHover(offerId: OfferPreviewType['id'] | null) {
+    setHoverOfferId(offerId);
+  }
   return (
     <div className="cities">
       <div className="cities__places-container container">
         <section className="cities__places places">
           <h2 className="visually-hidden">Places</h2>
-          <b className="places__found">{ offers.length } places to stay in {activeCity}</b>
+          <b className="places__found">{ offers.length } places to stay in {activeCity.name}</b>
           <form className="places__sorting" action="#" method="get">
             <span className="places__sorting-caption">Sort by</span>
             <span className="places__sorting-type" tabIndex={0}>
@@ -37,11 +44,19 @@ function Cities({offers}: CitiesProps): JSX.Element {
                 key={offer.id}
                 offer={offer}
                 block="cities"
+                onCardHover={handleCardHover}
               />))}
           </div>
         </section>
         <div className="cities__right-section">
-          <section className="cities__map map"></section>
+          <section className="cities__map map">
+            <Map
+              location={activeCity.location}
+              block='cities'
+              offers={offers}
+              specialOfferId={hoverOfferId}
+            />
+          </section>
         </div>
       </div>
     </div>

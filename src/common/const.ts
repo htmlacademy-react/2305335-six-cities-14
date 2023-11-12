@@ -8,14 +8,31 @@ enum AppRoute {
   NotFound = '/not-found'
 }
 
-enum CityName {
-  Paris = 'Paris',
-  Cologne = 'Cologne',
-  Brussels = 'Brussels',
-  Amsterdam = 'Amsterdam',
-  Hamburg = 'Hamburg',
-  Dusseldorf = 'Dusseldorf',
-}
+const CitiesLocation = {
+  Paris: {
+    name: 'Paris',
+  },
+  Cologne: {
+    name: 'Cologne',
+  },
+  Brussels: {
+    name: 'Brussels',
+  },
+  Amsterdam: {
+    name: 'Amsterdam',
+    location: {
+      latitude: 52.3676,
+      longitude: 4.9041,
+      zoom: 12,
+    }
+  },
+  Hamburg: {
+    name: 'Hamburg',
+  },
+  Dusseldorf: {
+    name: 'Dusseldorf',
+  }
+};
 
 enum AuthorizationStatus {
   Auth = 'AUTH',
@@ -34,4 +51,4 @@ const ratingMap = {
   '1':'terribly',
 };
 
-export{PLACES_COUNT, AppRoute, AuthorizationStatus, CityName, MIN_COMMENT_LENGTH, MAX_COMMENT_LENGTH, ratingMap};
+export{PLACES_COUNT, AppRoute, AuthorizationStatus, CitiesLocation, MIN_COMMENT_LENGTH, MAX_COMMENT_LENGTH, ratingMap};
