@@ -9,13 +9,15 @@ import OfferPage from '../../pages/offer-page/offer-page';
 import PrivateRoute from '../private-route/private-route';
 import FavoritePage from '../../pages/favorites-page/favorites-page';
 
-import { OfferType } from '../../types/offer';
+import {OfferType} from '../../types/offer';
+import {ReviewType} from '../../types/review';
 
 type AppProps = {
   offers: OfferType[];
+  reviews: ReviewType[];
 }
 
-function App({offers}: AppProps): JSX.Element {
+function App({offers, reviews}: AppProps): JSX.Element {
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -37,7 +39,12 @@ function App({offers}: AppProps): JSX.Element {
           />
           <Route
             path={`${AppRoute.Offer}/:offerId`}
-            element={<OfferPage offers={offers} />}
+            element={
+              <OfferPage
+                offers={offers}
+                reviews={reviews}
+              />
+            }
           />
           <Route
             path={AppRoute.Favorites}

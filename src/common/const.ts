@@ -42,6 +42,8 @@ enum AuthorizationStatus {
 
 const MIN_COMMENT_LENGTH = 50;
 const MAX_COMMENT_LENGTH = 300;
+const MAX_NEAR_PLACES_COUNT = 3;
+const MAX_REVIEWS_COUNT = 10;
 
 const ratingMap = {
   '5':'perfect',
@@ -51,4 +53,5 @@ const ratingMap = {
   '1':'terribly',
 };
 
-export{PLACES_COUNT, AppRoute, AuthorizationStatus, CitiesLocation, MIN_COMMENT_LENGTH, MAX_COMMENT_LENGTH, ratingMap};
+export{PLACES_COUNT, AppRoute, AuthorizationStatus, CitiesLocation, MIN_COMMENT_LENGTH, MAX_COMMENT_LENGTH,
+  MAX_NEAR_PLACES_COUNT, MAX_REVIEWS_COUNT, ratingMap};
